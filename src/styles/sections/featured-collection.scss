@@ -1,0 +1,144 @@
+/**
+ * Sections: Featured collection
+ * -----------------------------------------------------------------------------
+ * Base styling for the featured collection product grid.
+ *
+ */
+
+.featured-collection {
+    padding: 0 20px;
+    h2 {
+        padding: 0 0 8px;
+        font-size: 28px;
+        font-family: $primary-font;
+        font-weight: bold;
+        line-height: 34px;
+        text-align: center;
+    }
+    p {
+        padding: 0 0 24px;
+        text-align: center;
+    }
+    .featured-collection__title {
+        margin: auto;
+        padding-top: 40px;
+        width: 100%;
+        max-width: 610px;
+    }
+    .featured-collection__products {
+        display: flex;
+        flex-wrap: wrap;
+        .featured-collection__products__product {
+            width: 50%;
+            padding-bottom: 18px;
+            text-decoration: none;
+            img {
+                width: 100%;
+            }
+            .featured-collection__products__product__title {
+                padding: 8px 0 0;
+                color: $primary-color;
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 17px;
+                text-align: left;
+            }
+            .featured-collection__products__product__price {
+                display: block;
+                margin-top: 8px;
+                color: $secondary-color;
+                font-family: $primary-font;
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 18px;
+            }
+            .featured-collection__products__product__add-to-cart {
+                display: block;
+                position: absolute;
+                height: 47px;
+                width: calc(100% - 36px);
+                bottom: 18px;
+                margin: 0 18px;
+                opacity: 0;
+                transition: opacity 0.5s;
+                background-color: $white-color;
+                color: $primary-color;
+                font-family: $primary-font;
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 43px;
+                text-align: center;
+            }
+            &:nth-child(odd) {
+                padding-right: 10px;
+            }
+            &:nth-child(even) {
+                padding-left: 10px;
+            }
+        }
+    }
+    .featured-collection__view-collection {
+        width: 100%;
+        margin: 30px 0;
+        span {
+            height: 35px;
+            width: 125px;
+            display: block;
+            text-align: center;
+            margin: auto;
+            background-color: $primary-color;
+            color: $white-color;
+            font-family: $primary-font;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 35px;
+            cursor: pointer;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .featured-collection {
+        padding: 0 54px;
+        h2 {
+            text-align: center;
+            font-family: $primary-font;
+            font-size: 40px;
+            font-weight: bold;
+            line-height: 49px;
+        }
+        p {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 26px;
+        }
+        .featured-collection__title {
+            padding-top: 60px;
+        }
+        .featured-collection__products {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -20px;
+            .featured-collection__products__product {
+                width: 25%;
+                padding: 0 17.5px !important; // important used instead of using specificity on odd and even
+                .featured-collection__products__product__image {
+                    position: relative;
+                }
+                &:hover {
+                    .featured-collection__products__product__add-to-cart {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .featured-collection__view-collection {
+            span {
+                height: 55px;
+                width: 175px;
+                font-size: 18px;
+                line-height: 52px;
+            }
+        }
+    }
+}

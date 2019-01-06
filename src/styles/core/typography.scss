@@ -1,0 +1,57 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $font-body;
+    font-weight: $font-body-weight;
+    font-style: $font-body-style;
+    font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    text-align: center;
+    color: $primary-color;
+    font-family: $primary-font;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 29px;
+}
+
+body,
+input,
+textarea,
+button,
+select {
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: 100%;
+}
+
+a:focus {
+    color: inherit;
+}
+
+p {
+    margin: 0;
+    color: $secondary-color;
+    font-family: $primary-font;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+}
+
+@media only screen and (min-width: 992px) {
+    h2 {
+        font-size: 40px;
+        line-height: 49px;
+    }
+}
